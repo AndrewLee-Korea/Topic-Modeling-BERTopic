@@ -13,7 +13,7 @@
 
 ### Project Overview
 
-This project implements **BERTopic** for analyzing Korean mobile banking app reviews from **Google Play Store** and **Apple App Store**. The analysis identifies key themes in user feedback to inform UX improvements and strategic decision-making for financial mobile applications.
+This project combines **BERTopic-based topic modeling** with **sentiment analysis** to analyze Korean mobile banking app reviews from **Google Play Store** and **Apple App Store**. The dual-analysis approach identifies key themes in user feedback while quantifying emotional sentiment, enabling data-driven UX improvements and strategic decision-making for financial mobile applications.
 
 ### Key Components
 
@@ -24,6 +24,7 @@ This project implements **BERTopic** for analyzing Korean mobile banking app rev
 | Dimensionality Reduction | UMAP | 384 → 5 dimensions |
 | Clustering | HDBSCAN | Density-based topic discovery |
 | Topic Representation | c-TF-IDF | Extract representative keywords |
+| Sentiment Analysis | Custom Polarity Scoring | Quantify emotional tone per review |
 
 ### Results
 
@@ -58,6 +59,12 @@ The analysis discovered **2 distinct topics** from 317 processed reviews:
 #### Sentiment Analysis
 ![Sentiment Distribution](result/sentiment_distribution_enhanced.png)
 
+#### Sentiment by Topic
+![Sentiment by Topic](result/sentiment_by_topic_enhanced.png)
+
+#### Topic-Sentiment Heatmap
+Interactive visualization available: `result/topic_sentiment_heatmap.html`
+
 ### Key Findings
 
 1. **Authentication Pain Points**: The dominant topic (96% of reviews) centers on login, certificate registration, and authentication errors. Users frequently mention "무한 로그인" (infinite login loops) and certificate-related frustrations.
@@ -72,17 +79,19 @@ The analysis discovered **2 distinct topics** from 317 processed reviews:
 ### Project Structure
 
 ```
-topic_modeling_bertopic/
+korean-app-review-nlp/
 ├── data/
-│   └── all_reviews.xlsx          # Raw review data
+│   └── all_reviews.xlsx          # Raw review data (Google Play + App Store)
 ├── result/
 │   ├── bertopic_topic_info.csv   # Topic summary
 │   ├── bertopic_document_topics.csv
 │   ├── bertopic_barchart.html    # Interactive visualization
 │   ├── bertopic_heatmap.html
+│   ├── topic_sentiment_heatmap.html
 │   ├── wordcloud_topic_*.png
-│   └── *.png                     # Static visualizations
-├── Topic_Modeling_BERTopic_For_App_Reviews.ipynb
+│   ├── sentiment_*.png           # Sentiment visualizations
+│   └── comprehensive_topic_summary.png
+├── Analyze_App_Reviews.ipynb
 ├── stop_words_list.txt
 ├── dictionary.txt                # Custom Komoran dictionary
 └── README.md
@@ -92,12 +101,12 @@ topic_modeling_bertopic/
 
 ```bash
 # Clone the repository
-git clone https://github.com/AndrewLee-Korea/topic_modeling_bertopic.git
-cd topic_modeling_bertopic
+git clone https://github.com/yourusername/korean-app-review-nlp.git
+cd korean-app-review-nlp
 
 # Install dependencies
 pip install bertopic sentence-transformers umap-learn hdbscan
-pip install konlpy pandas numpy plotly
+pip install konlpy pandas numpy plotly wordcloud
 pip install "scipy<1.13"  # Compatibility fix
 ```
 
@@ -143,7 +152,7 @@ topics, probs = topic_model.fit_transform(docs)
 
 ### 프로젝트 개요
 
-본 프로젝트는 **BERTopic**을 활용하여 **Google Play Store**와 **Apple App Store**의 한국 금융 모바일 앱 리뷰를 분석합니다. 사용자 피드백에서 핵심 주제를 식별하여 UX 개선 및 전략적 의사결정을 지원합니다.
+본 프로젝트는 **BERTopic 기반 토픽 모델링**과 **감성 분석**을 결합하여 **Google Play Store**와 **Apple App Store**의 한국 금융 모바일 앱 리뷰를 분석합니다. 이중 분석 접근법을 통해 사용자 피드백의 핵심 주제를 식별하고 감정적 감성을 정량화하여, 데이터 기반의 UX 개선 및 전략적 의사결정을 지원합니다.
 
 ### 주요 구성 요소
 
@@ -154,6 +163,7 @@ topics, probs = topic_model.fit_transform(docs)
 | 차원 축소 | UMAP | 384 → 5차원 |
 | 클러스터링 | HDBSCAN | 밀도 기반 토픽 발견 |
 | 토픽 표현 | c-TF-IDF | 대표 키워드 추출 |
+| 감성 분석 | Custom Polarity Scoring | 리뷰별 감정 톤 정량화 |
 
 ### 분석 결과
 
@@ -187,6 +197,12 @@ topics, probs = topic_model.fit_transform(docs)
 
 #### 감성 분석
 ![감성 분포](result/sentiment_distribution_enhanced.png)
+
+#### 토픽별 감성 분석
+![토픽별 감성](result/sentiment_by_topic_enhanced.png)
+
+#### 토픽-감성 히트맵
+인터랙티브 시각화: `result/topic_sentiment_heatmap.html`
 
 ### 핵심 발견사항
 
@@ -226,5 +242,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 **Yongjun (Andrew) Lee**  
-- GitHub: [@AndrewLee-Korea](https://github.com/AndrewLee-Korea)
+- GitHub: [@yourusername](https://github.com/yourusername)
 - Organization: Korea Securities Finance Corporation (KSFC)
