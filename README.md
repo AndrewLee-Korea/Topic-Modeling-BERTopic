@@ -101,7 +101,7 @@ korean-app-review-nlp/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/korean-app-review-nlp.git
+git clone https://github.com/AndrewLee-Korea/korean-app-review-nlp.git
 cd korean-app-review-nlp
 
 # Install dependencies
@@ -241,5 +241,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 **Yongjun (Andrew) Lee**  
-- GitHub: [@yYongjun Lee](https://github.com/AndrewLee-Korea)
+- GitHub: [@AndrewLee-Korea](https://github.com/AndrewLee-Korea)
 - Organization: Korea Securities Finance Corporation (KSFC)
