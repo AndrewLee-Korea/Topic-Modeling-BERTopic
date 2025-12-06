@@ -1,4 +1,4 @@
-# Topic-Modeling-BERTopic
+# Korean App Review Analysis: Topic Modeling & Sentiment Analysis
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![BERTopic](https://img.shields.io/badge/BERTopic-0.17.4-green.svg)](https://maartengr.github.io/BERTopic/)
