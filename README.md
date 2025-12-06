@@ -73,7 +73,7 @@ Interactive visualization available: `result/topic_sentiment_heatmap.html`
 
 3. **Actionable Insights**: 
    - Streamline certificate registration workflow
-   - Implement session persistence to reduce repeated authentication
+   - Need to reduce repeated authentication
    - Address app performance issues (buffering, loading times)
 
 ### Project Structure
@@ -212,7 +212,7 @@ topics, probs = topic_model.fit_transform(docs)
 
 3. **개선 제안**: 
    - 인증서 등록 워크플로우 간소화
-   - 세션 유지 기능 구현으로 반복 인증 감소
+   - 반복 인증 감소 필요
    - 앱 성능 이슈(버퍼링, 로딩 시간) 해결
 
 ### 기술적 특징
