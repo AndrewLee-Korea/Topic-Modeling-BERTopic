@@ -4,7 +4,7 @@
 [![BERTopic](https://img.shields.io/badge/BERTopic-0.17.4-green.svg)](https://maartengr.github.io/BERTopic/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Author**: Yongjun (Andrew) Lee  
+**Author**: Yongjun Lee (Andrew)  
 **Organization**: Korea Securities Finance Corporation (KSFC)
 
 ---
