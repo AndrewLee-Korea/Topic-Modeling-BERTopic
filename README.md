@@ -240,7 +240,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Korea Securities Finance Corporation (KSFC) for supporting this research
 
 ## Contact
-
 **Yongjun (Andrew) Lee**  
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@yYongjun Lee](https://github.com/AndrewLee-Korea)
 - Organization: Korea Securities Finance Corporation (KSFC)
